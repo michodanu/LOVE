@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Absolute</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onclick="startAll()">
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- LOCK -->
+<div id="lock">
+  <h2>Kode Rahasia 💖</h2>
+  <input id="codeInput" placeholder="Masukkan kode">
+  <button onclick="unlock()">Buka</button>
+</div>
+
+<!-- TAP -->
+<div id="tap">Tap anywhere 🤍</div>
+
+<!-- EFEK -->
+<div class="hearts"></div>
+<div class="flowers"></div>
+<div class="big-flowers"></div>
+
+<!-- FULLSCREEN FOTO -->
+<div id="fullscreen" class="fullscreen" onclick="closeFull()">
+  <img id="fullImg">
+</div>
+
+<!-- ENDING -->
+<div id="ending" class="ending">
+  <h1 id="loveText">I LOVE YOU</h1>
+  <p class="sub">Forever & Always 💖</p>
+</div>
+
+<!-- CONTENT -->
+<div class="container layout">
+
+  <!-- KIRI -->
+  <section class="left">
+    <img src="hug.gif" class="hug">
+    <div id="text"></div>
+  </section>
+
+  <!-- KANAN -->
+  <section class="right">
+    <div class="photo-slider" onclick="toggleSlide()">
+      <div class="track" id="track">
+        <img src="photo1.jpeg" onclick="openZoom(this)">
+        <img src="photo2.jpeg" onclick="openZoom(this)">
+        <img src="photo1.jpeg" onclick="openZoom(this)">
+        <img src="photo2.jpeg" onclick="openZoom(this)">
+      </div>
+    </div>
+
+    <canvas id="qrcode"></canvas>
+    <p class="qr-text">Scan aku 💌</p>
+  </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
